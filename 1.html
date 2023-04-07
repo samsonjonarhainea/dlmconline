@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Emergency Room Admitting Slip</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			font-size: 14px;
+			background-image: url('https://scontent.fmnl13-1.fna.fbcdn.net/v/t39.30808-6/297217260_2561176497345712_4454000950623251344_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeGCdFAcx0-Y1yGAU4LZtS3sxCOeCw7Fj5fEI54LDsWPl5jwr5Zmc1rP-YEZR2oonokWneACPwSaVlgN4W0KAozJ&_nc_ohc=yogqlai-kAQAX_aipTc&_nc_ht=scontent.fmnl13-1.fna&oh=00_AfA5Fn3z-HFzFk3NCZCujJO6ozL95Np2TuWJQQCs_ZOz5g&oe=6431CD3E');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-color: #;
+			color: #fff;
+		}
+		h1 {
+			font-size: 28px;
+			text-align: center;
+			padding-top: -70px;
+			margin-bottom: -50px;
+			color: #000;
+}
+h2 {
+			font-size: 20px;
+			text-align: center;
+			padding-top: 40px;
+			margin-bottom: 0px;
+			color: #000;
+}
+h3 {
+			font-size: 15px;
+			text-align: center;
+			padding-top: 40px;
+			margin-top: -30px;
+			color: #000;
+}
+		h4 {
+			font-size: 20px;
+			text-align: center;
+			padding-top: 40px;
+			margin-top: -30px;
+			color: #000;
+}
+		table {
+			border-collapse: collapse;
+			width: 100%;
+			margin-top: 20px;
+			color: #000;
+			background-color: #fff;
+			opacity: 0.8;
+}
+		th, td {
+			border: 1px solid black;
+			padding: 5px;
+		}
+		th {
+			background-color: #;
+		}
+        label{
+  display: block;
+  float: left;
+  width : 120px;    
+}
+	</style>
+    <meta charset="utf-6"> 
+    <meta name="viewport" content="width=device-width, initial-scale=2"> 
+  
+</head>
+
+<body>
+<div class="header">
+  <center><img src="data:image/jpeg;base64,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" alt="logo" /> <
+	<h1>Devine Love Medical Center</h1>
+    <h2>Emergency Room</h2>
+     <h3>Outpatient/Inpatient Consultant Form</h3>
+    
+	
+	<center> <table>
+   <tr>
+<td colspan="2">
+ Date: <input type="date" name="dob">
+            Time: <input type="time" name="dob">
+           
+				
+			</td>
+		</tr>
+		<tr>
+<td colspan="2">
+				<p><b><center>Personal Information</center></b></p>
+              
+			
+             
+            <input type='text' placeholder='SURNAME'> 
+	        <input type='text' placeholder='FIRST NAME'>
+            <input type='text' placeholder='MIDDLE NAME'>
+             Date of Birth: <input type="date" name="dob">
+            Gender: <input type="checkbox"> Male <input type="checkbox"> Female
+           <p> <b>Marital Status :</b> <input type="checkbox"> Single <input type="checkbox"> Married <input type="checkbox">Widowed <input type="checkbox">Separated <input type="checkbox">Divorced </p>
+            
+        <tr>
+			<td>
+Address: <input type="text" name="physician"><br>
+			</td>
+			<td>
+<label for="phone">Phone number:</label>
+  <input type="tel" id="phone" name="phone"
+  placeholder="1234-567-8910"
+  pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}">
+			</td>
+		</tr>
+        
+        <tr>
+<td colspan="2">
+		<input type='text' placeholder='Occupation'> 
+	        <input type='text' placeholder='Citizenship'>
+            <input type='text' placeholder='Religion'>
+           <b> Triage: </b><input type="checkbox"> Emergent <input type="checkbox"> Urgent <input type="checkbox"> Non-urgent
+            
+     
+               
+		<tr>
+			<td>
+				Attending Physician: <input type="text" name="physician"><br>
+							</td>
+			<td>
+<b><center>Classification </b></center>
+                <input type="checkbox"> House Case <input type="checkbox"> Private <input type="checkbox"> Referral <input type="checkbox">Philhealth <input type="checkbox">HMO <input type="checkbox">Non-Philhealth
+				
+			</td>
+		</tr>
+        <tr>
+<td colspan="2">
+		<p><b><center>Vital Signs </p> </b></center><input type='text' placeholder='Blood Pressure'> 
+	        <input type='text' placeholder='Pulse Rate'>
+            <input type='text' placeholder='Respiratory Rate'>
+             <input type='text' placeholder='Oxygen Saturation'>
+              <input type='text' placeholder='Weight'>
+               <input type='text' placeholder='Height'>
+               
+        Pain Scale: <select size=1 name=txtgender>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+<tr>
+        <tr>
+			<td>
+				Chief Complain: <input type="text" name="physician"><br>
+							</td>
+			<td>
+				<b><center></b></center>
+                <input type='text' placeholder='TO1'>
+            <input type='text' placeholder='DO1'>
+             <input type='text' placeholder='PO1'
+				
+			</td>
+		</tr>
+       <table>   <tr>
+<td colspan="2">
+				<p><b><center>Review of System</center></b></p>
+              
+        <tr>
+         <tr>
+			<td>
+            
+				<p><input type="checkbox"> Constitutional (fever, chills, weight loss, fatigue)</p>
+                <p><input type="checkbox"> Skin  (rash, lesions, bruises)</p>
+ <p><input type="checkbox"> Eyes  (redness, acoity changes, pain)</p>
+                <p><input type="checkbox"> EENT  (hearing loss, sore throat, discharge tinnitus)</p>
+                <p><input type="checkbox"> Cardiovascular  (chest pain, palpitation)</p>
+                <p><input type="checkbox"> Respiratory  (cough, shortness of breath)</p>
+							</td>
+			<td>
+				<p><input type="checkbox"> OIT (diarrhea, vommiting, abdominal pain, nausea) </p>
+                <p><input type="checkbox"> Genitourinary  (dysuria, urgency, nocturia, frequency)</p>
+                <p><input type="checkbox"> Neurologic  (headache, dizziness, seizure)</p>
+               <p> <input type="checkbox"> Psyhiatry  (depression, anxiety)</p>
+               <p> <input type="checkbox"> Musculoskeletal  (muscle pain, joint pain)</p>
+               <p> <input type="checkbox"> OTHERS: </p>
+				
+			</td>
+</tr>  
+   
+         <tr>
+        
+			<td>
+            <b><center>Past Medical History</b></center>
+				<p> <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"><input type='text' placeholder=''><label for="html">Asthma</label><br> 
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"><input type='text' placeholder=''><label for="html">CVA</label><br>
+                 <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"><input type='text' placeholder=''><label for="html">Cancer</label><br>
+                 <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"><input type='text' placeholder=''><label for="html">Diabetes</label><br>
+                 <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"><input type='text' placeholder=''><label for="html">Heart Disease</label><br>
+                 <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"><input type='text' placeholder=''><label for="html">Hypertension</label><br> 
+                 <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"><input type='text' placeholder=''><label for="html">OTHERS</label><br> 
+               
+  
+							</td>
+                             <td>
+            <b><center>Current Medication</b></center>
+           <center> <textarea name="message" rows="10" cols="30">
+.
+</textarea> </center>
+           
+             
+  
+							</td>
+			
+		</tr>
+         <tr>
+<td colspan="2">
+			<p>	<b><center>Obstetric History</center></b> </p>
+               
+                       LMP: <input type="date" name="dob">
+                       AOG: <input type="date" name="dob">
+                       EDD: <input type="date" name="dob">
+                       <input type='text' placeholder='G'>
+                       <input type='text' placeholder='P'>
+   <tr>
+    <tr>
+<td colspan="2">
+				<p><b><center>Physical and Social History</center></b> </p>              
+               <input type="checkbox"> Drugs: <center> Quit?<input type="checkbox"> Y <input type="checkbox"> N   </center>         
+                <input type="checkbox"> Tabbaco: <center> Quit?<input type="checkbox"> Y <input type="checkbox"> N   </center>         
+                 <input type="checkbox"> Alcohol: <center> Quit?<input type="checkbox"> Y <input type="checkbox"> N   </center>         
+                 
+                
+             
+ <tr>
+   <tr>
+			<td>
+            
+				Allergies:  <input type="text" name="physician"><br>
+			<td>
+				Immunization:  <input type="text" name="physician"><br>
+				
+			</td>
+		</tr>
+   <tr>
+<td colspan="2">
+				<p><b><center>Travel History</center></b></p>
+                History of travel/visit/ Work in other country <input type="checkbox"> Yes <input type="checkbox"> No
+                <p>If yes, Place of travel <input type="text" name="physician"><br></p>
+               Arrival in the Philippines  Date: <input type="date" name="dob">
+            Time: <input type="time" name="dob">
+           
+<tr>
+<tr>
+<td colspan="2">
+				<p><b><center>Covid-19 Protocol</center></b></p>
+<input type="checkbox"> Unvaccinated <input type="checkbox"> Vaccinated <input type="checkbox"> Booster
+               1st Dose Date: <input type="date" name="dob">
+               2nd Dose Date: <input type="date" name="dob">
+               Booster Date: <input type="date" name="dob"> 
+             <p>  Name of vaccine <input type="text" name="physician"><br> </p>
+                Facility <input type="text" name="physician"><br>
+               
+           
+<tr>
+<tr>
+<td colspan="2">
+				<p><b><center>History of Present Illness</center></b></p>
+                <center> <textarea name="message" rows="10" cols="100">
+.
+</textarea> </center>
+<table>
+<p><b><center>Physical Assessment</center></b></p>
+  <tr>
+    <td>GENERAL APPERANCE<th/>
+    <td><input type="checkbox"></td>
+    <td><input type="text" name="physician"><br> </td>
+  </tr>
+  <tr>
+    <td>MENTAL STATUS<th/>
+    <td><input type="checkbox"></td>
+    <td><input type="text" name="physician"><br> </td>
+  </tr>
+  <tr>
+    <td>SKIN<th/>
+    <td><input type="checkbox"></td>
+    <td><input type="text" name="physician"><br> </td>
+  </tr>
+  <tr>
+    <td>HEENT<th/>
+    <td><input type="checkbox"></td>
+    <td><input type="text" name="physician"><br> </td>
+  </tr>
+  <tr>
+    <td>CHEST/LUNGS<th/>
+    <td><input type="checkbox"></td>
+    <td><input type="text" name="physician"><br> </td>
+  </tr>
+  <tr>
+    <td>ABDOMEN<th/>
+    <td><input type="checkbox"></td>
+    <td><input type="text" name="physician"><br> </td>
+  </tr>
+  <tr>
+    <td>RECTUM<th/>
+    <td><input type="checkbox"></td>
+    <td><input type="text" name="physician"><br> </td>
+  </tr>
+  <tr>
+    <td>EXTREMIRES<th/>
+    <td><input type="checkbox"></td>
+    <td><input type="text" name="physician"><br> </td>
+  </tr>
+  <tr>
+    <td>NEURO<th/>
+    <td><input type="checkbox"></td>
+    <td><input type="text" name="physician"><br> </td>
+  </tr>
+  
+</table>
+
+<html>
+<head>
+<style>
+table { font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body><table>
+  <tr>
+   <b><th>GLASSCO COMA SCALE</th></b>
+   <th>PUPIL</th>
+  <tr>
+   <td>EYES: <select size=1 name=txtgender>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                              
+   <td>Pupil Size:<input type="number" name="physician"><br></td>  
+  <tr>
+    <td>NEURO: <select size=1 name=txtgender>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            
+                            
+    <td>Equallity reactive to light:  <input type="checkbox"> Yes <input type="checkbox"> No</td>  
+  <tr>
+    <td>Motor: <select size=1 name=txtgender>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            
+    <td>Others:<input type="text" name="physician"></td>  
+  <tr>
+    <td>TOTAL: <select size=1 name=txtgender>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                             <option>7</option>
+                             <option>8</option>
+                             <option>8</option>
+                             <option>9</option>
+                             <option>10</option>
+                             <option>11</option>
+                             <option>12</option>
+                             <option>13</option>
+                             <option>14</option>
+                             <option>15</option>
+      </tr>
+<td colspan="2">
+				<p><b><center>IMRRESSION/ADMITTING DIAGNOSIS:</center></b></p>
+                <center> <textarea name="message" rows="10" cols="100">
+.
+</textarea> </center>
+ 
+ 
+ <html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+<table>
+  <tr>
+   <th>OPD:<input type="text" name="physician"><br></th>
+   
+   <th>ADMISSION:<input type="text" name="physician"><br></th>
+      <th>THOC:<input type="text" name="physician"><br></th>
+   <th>HAMA:<input type="text" name="physician"><br></th>
+      <th>DOA/ER DEATH: <input type="text" name="physician"><br></th>
+         </tr>
+</table>
+
+
+
+               
+           
+<tr>
+</table>  
+</table>
+</center>
+	
+</body>
+</html>
